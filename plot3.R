@@ -12,7 +12,7 @@ final_data$DateTime <- as.POSIXct(datetime)
 png(filename = "plot3.png", width=480, height = 480)
 
 with(final_data, {
-    plot(DateTime, Sub_metering_1, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+    plot(DateTime, Sub_metering_1, type="l", ylab="Energy Sub metering", xlab="")
     lines(DateTime, Sub_metering_2,col='Red')
     lines(DateTime, Sub_metering_3,col='Blue')
 })

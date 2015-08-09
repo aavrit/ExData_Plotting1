@@ -14,16 +14,16 @@ png(filename = "plot4.png", width=480, height = 480)
 par(mfrow=c(2,2), mar=c(4,4,2,1), oma=c(0,0,2,0))
 
 with(final_data, {
-    plot(DateTime, Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+    plot(DateTime, Global_active_power, type="l", ylab="Global Active Power", xlab="")
     
-    plot(DateTime, Voltage, type="l", ylab="Voltage (volt)", xlab="")
+    plot(DateTime, Voltage, type="l", ylab="Voltage", xlab="")
     
-    plot(DateTime, Sub_metering_1, type="l", ylab="Global Active Power (kilowatts)", xlab="")
+    plot(DateTime, Sub_metering_1, type="l", ylab="Energy sub metering", xlab="")
     lines(DateTime, Sub_metering_2,col='Red')
     lines(DateTime, Sub_metering_3,col='Blue')
     legend("topright", col=c("black", "red", "blue"), lty=1, lwd=2, bty="n", legend=c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
     
-    plot(DateTime, Global_reactive_power, type="l", ylab="Global Rective Power (kilowatts)",xlab="")
+    plot(DateTime, Global_reactive_power, type="l", ylab="Global Reactive Power",xlab="")
 })
 
 dev.off()
